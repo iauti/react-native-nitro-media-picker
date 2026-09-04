@@ -7,6 +7,7 @@ The extraction baseline uses Expo 57, React Native 0.86.3, and Nitro 0.37.1. Val
 - iOS simulator app build.
 - Android library and complete example `assembleDebug` for arm64, and seven JVM tests.
 - Swift helper tests.
+- Six iOS Harness native smoke tests on iPhone 16 Pro / iOS 18.5.
 - TypeScript checks, including public API contract tests.
 - npm tarball dry-run inspection, plus packed CommonJS export smoke test.
 

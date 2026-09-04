@@ -30,3 +30,5 @@ bun run --cwd apps/example harness -- --harnessRunner android
 ```
 
 Harness validates native registration and API behavior without automating system picker selection. Override `HARNESS_IOS_DEVICE`, `HARNESS_IOS_VERSION`, or `HARNESS_ANDROID_DEVICE` for your installed simulator/emulator. The defaults follow the FileToolkit example. Real picker interaction remains a manual verification step.
+
+Harness uses Jest file discovery without Watchman. The repository applies a pinned Harness startup patch for Expo 57; install dependencies with Bun so the patch is applied. The native smoke suite does not open system pickers or request permission.

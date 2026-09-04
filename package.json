@@ -26,5 +26,8 @@
     "@release-it/bumper": "^8.0.0",
     "@release-it/conventional-changelog": "^12.0.0",
     "release-it": "^21.0.0"
+  },
+  "patchedDependencies": {
+    "@react-native-harness/runtime@1.4.1": "patches/@react-native-harness%2Fruntime@1.4.1.patch"
   }
 }

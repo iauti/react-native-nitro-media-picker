@@ -10,3 +10,4 @@ apps/example/android/
 **/.cxx/
 .env*
 artifacts/
+.harness/
