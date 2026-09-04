@@ -1,0 +1,33 @@
+{
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "composite": false,
+    "outDir": "lib",
+    "rootDir": "src",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "esnext"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "verbatimModuleSyntax": false,
+    "declaration": true,
+    "ignoreDeprecations": "6.0"
+  }
+}

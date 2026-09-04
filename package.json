@@ -1,0 +1,30 @@
+{
+  "name": "react-native-nitro-media-picker-root",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "bun@1.3.3",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "specs": "bun run --cwd packages/react-native-nitro-media-picker specs",
+    "build": "bun run --cwd packages/react-native-nitro-media-picker build",
+    "typecheck": "bun run --cwd packages/react-native-nitro-media-picker typecheck && bun run --cwd apps/example typecheck",
+    "example": "bun run --cwd apps/example",
+    "package:check": "bun run build && node scripts/validate-package.mjs",
+    "check": "bun run check:ci",
+    "test": "bun run --cwd packages/react-native-nitro-media-picker test",
+    "test:ios:helpers": "bash scripts/test-ios-helpers.sh",
+    "check:ci": "bun run check:generated && bun run test && bun run typecheck && bun run lint && bun run build && bun run --cwd apps/example verify:structure && bun run package:check",
+    "check:generated": "bun run specs && git diff --exit-code -- packages/react-native-nitro-media-picker/nitrogen",
+    "lint": "bun run --cwd packages/react-native-nitro-media-picker lint-ci && bun run --cwd apps/example lint",
+    "release": "bash scripts/release.sh",
+    "release-it": "release-it"
+  },
+  "devDependencies": {
+    "@release-it/bumper": "^8.0.0",
+    "@release-it/conventional-changelog": "^12.0.0",
+    "release-it": "^21.0.0"
+  }
+}

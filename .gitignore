@@ -1,0 +1,12 @@
+node_modules/
+lib/
+*.tsbuildinfo
+*.tgz
+.DS_Store
+.expo/
+apps/example/ios/
+apps/example/android/
+**/build/
+**/.cxx/
+.env*
+artifacts/

@@ -1,0 +1,91 @@
+{
+  "name": "react-native-nitro-media-picker",
+  "version": "0.0.1",
+  "description": "Native media and document pickers for React Native, with file-provider handles and on-demand copies powered by Nitro Modules.",
+  "homepage": "https://github.com/iauti/react-native-nitro-media-picker#readme",
+  "author": "IAUTI Labs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iauti/react-native-nitro-media-picker.git",
+    "directory": "packages/react-native-nitro-media-picker"
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "source": "./src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "nitro",
+    "media",
+    "picker",
+    "photos",
+    "ios",
+    "android",
+    "documents",
+    "files",
+    "document-picker"
+  ],
+  "files": [
+    "src",
+    "lib",
+    "nitrogen/generated",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/fix-prefab.gradle",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios",
+    "nitro.json",
+    "*.podspec",
+    "react-native.config.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "specs": "nitrogen",
+    "prepack": "npm run specs && npm run test && npm run lint-ci && npm run build",
+    "test": "tsc -p tests/tsconfig.json",
+    "lint": "eslint src tests --fix",
+    "lint-ci": "eslint src tests --max-warnings 0",
+    "release": "release-it"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": ">=0.76.0",
+    "react-native-nitro-modules": ">=0.37.1 <0.38.0"
+  },
+  "devDependencies": {
+    "nitrogen": "0.37.1",
+    "react-native-nitro-modules": "0.37.1",
+    "typescript": "~6.0.3",
+    "@types/react": "~19.2.2",
+    "@react-native/eslint-config": "0.85.3",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/iauti/react-native-nitro-media-picker/issues"
+  },
+  "react-native": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "react-native": "./src/index.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "all"
+  }
+}
